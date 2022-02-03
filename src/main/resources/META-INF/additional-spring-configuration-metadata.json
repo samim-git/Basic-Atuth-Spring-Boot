@@ -1,0 +1,13 @@
+{
+  "properties": [
+    {
+      "name": "spring.mobile.devicedelegatingviewresolver.enabled",
+      "type": "java.lang.String",
+      "description": "Description for spring.mobile.devicedelegatingviewresolver.enabled."
+    },
+    {
+      "name": "useUnicode",
+      "type": "java.lang.String",
+      "description": "Description for useUnicode."
+    }
+  ] }
