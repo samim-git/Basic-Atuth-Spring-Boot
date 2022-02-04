@@ -23,3 +23,36 @@ Add the following functions to your security configuration file.
                 .authorities("ROLE_USER");
     }  
 ```
+
+  ## Custon Entry Point
+  To handle your http error and generete your custom error response use the folloing function to your <b>CustomEntryPoint</b> class which implement <b>AuthenticationEntryPoint</b>
+  <br/>
+  <br/>
+  ```
+  @Override
+    public void commence(HttpServletRequest request, HttpServletResponse response, AuthenticationException authEx)
+            throws IOException {
+        JSONObject resultMap = new JSONObject();
+        resultMap.put("success",false);
+        resultMap.put("timestamp",new Date().getTime());
+        resultMap.put("status","403");
+        resultMap.put("error",authEx.getMessage());
+        resultMap.put("path",request.getRequestURI());
+
+        response.setContentType("application/json;charset=UTF-8");
+        response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
+
+        response.getWriter().write(resultMap.toString());
+
+    }
+  ```
+  
+  <br>
+  Don't forget to add the <b>JSONObject</b> library dependency in <b>pom.xml</b> file.
+    ```
+  <dependency>
+			<groupId>org.json</groupId>
+			<artifactId>json</artifactId>
+			<version>20160212</version>
+		</dependency>
+    ```
