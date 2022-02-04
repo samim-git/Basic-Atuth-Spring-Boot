@@ -9,7 +9,7 @@ Add the following functions to your security configuration file.
 <b><u>Note: </u><b> to not allow the spring to save the session for each request then add the <b><i>SessionCreationPolicy.STATELESS</i></b>
   <br/>
   <br/>
-```
+```java
   @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.csrf().disable().httpBasic().authenticationEntryPoint(basicAuthEntryPoint).and().authorizeRequests().anyRequest().authenticated();
@@ -28,7 +28,7 @@ Add the following functions to your security configuration file.
   To handle your http error and generete your custom error response use the folloing function to your <b>CustomEntryPoint</b> class which implement <b>AuthenticationEntryPoint</b>
   <br/>
   <br/>
-  ```
+  ```java
   @Override
     public void commence(HttpServletRequest request, HttpServletResponse response, AuthenticationException authEx)
             throws IOException {
@@ -50,7 +50,7 @@ Add the following functions to your security configuration file.
   <br/>
   Don't forget to add the <b>JSONObject</b> library dependency in <b>pom.xml</b> file.
 	<br/>
-    ```
+    ```xml
   	<dependency>
 		<groupId>org.json</groupId>
 		<artifactId>json</artifactId>
