@@ -47,12 +47,13 @@ Add the following functions to your security configuration file.
     }
   ```
   
-  <br>
+  <br/>
   Don't forget to add the <b>JSONObject</b> library dependency in <b>pom.xml</b> file.
+	<br/>
     ```
-  <dependency>
-			<groupId>org.json</groupId>
-			<artifactId>json</artifactId>
-			<version>20160212</version>
-		</dependency>
+  	<dependency>
+		<groupId>org.json</groupId>
+		<artifactId>json</artifactId>
+		<version>20160212</version>
+	</dependency>
     ```
