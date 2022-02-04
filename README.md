@@ -50,5 +50,5 @@ Add the following functions to your security configuration file.
   <br/>
   Don't forget to add the <b>JSONObject</b> library dependency in <b>pom.xml</b> file.
 	<br/>
-    ![Screen Shot 2022-02-04 at 3 09 19 PM](https://user-images.githubusercontent.com/57979167/152543025-ddf2599f-3137-457f-a742-dced5e011c5a.png)
+	<img src = "https://user-images.githubusercontent.com/57979167/152543025-ddf2599f-3137-457f-a742-dced5e011c5a.png"/>
 
