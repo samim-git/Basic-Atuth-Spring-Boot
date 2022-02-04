@@ -9,7 +9,7 @@ Add the following functions to your security configuration file.
 <b><u>Note: </u><b> to not allow the spring to save the session for each request then add the <b><i>SessionCreationPolicy.STATELESS</i></b>
   <br/>
   <br/>
-<code>
+'''
   @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.csrf().disable().httpBasic().authenticationEntryPoint(basicAuthEntryPoint).and().authorizeRequests().anyRequest().authenticated();
@@ -22,4 +22,4 @@ Add the following functions to your security configuration file.
                 .password(getPasswordEncoder().encode("samimjan"))
                 .authorities("ROLE_USER");
     }  
-</code>
+'''
