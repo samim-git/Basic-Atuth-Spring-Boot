@@ -4,8 +4,11 @@ This project shows how to configure basic auth to secure our rest API and basic 
 
 
 ## Security Configuration
-Add the following functions to your security configuration file
+Add the following functions to your security configuration file.
+<br/>
 <b><u>Note: </u><b> to not allow the spring to save the session for each request then add the <b><i>SessionCreationPolicy.STATELESS</i></b>
+  <br/>
+  <br/>
 <code>
   @Override
     protected void configure(HttpSecurity http) throws Exception {
