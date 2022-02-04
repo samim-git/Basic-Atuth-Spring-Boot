@@ -24,7 +24,7 @@ Add the following functions to your security configuration file.
     }  
 ```
 
-  ## Custon Entry Point
+  ## Custom Auth Entry Point
   To handle your http error and generete your custom error response use the folloing function to your <b>CustomEntryPoint</b> class which implement <b>AuthenticationEntryPoint</b>
   <br/>
   <br/>
@@ -51,9 +51,9 @@ Add the following functions to your security configuration file.
   Don't forget to add the <b>JSONObject</b> library dependency in <b>pom.xml</b> file.
 	<br/>
     ```xml
-  	<dependency>
+  	"<dependency>
 		<groupId>org.json</groupId>
 		<artifactId>json</artifactId>
 		<version>20160212</version>
-	</dependency>
+	</dependency>"
     ```
